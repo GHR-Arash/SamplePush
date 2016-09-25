@@ -32,7 +32,7 @@ angular.module('starter', ['ionic','ngCordova'])
             $cordovaPushV5.onError();
 
             // register to get registrationId
-            $cordovaPushV5.register().then(function () {
+            $cordovaPushV5.register().then(function (registrationId) {
                 window.localStorage.setItem("token", registrationId)
                 //$scope.registrationId = registrationId;
                 // save `registrationId` somewhere;
